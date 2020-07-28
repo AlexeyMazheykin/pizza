@@ -1,42 +1,201 @@
+/* montserrat-regular - latin */
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat Regular'), local('Montserrat-Regular'), url('../fonts/montserrat-v14-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/montserrat-v14-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-700 - latin */
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Montserrat Bold'), local('Montserrat-Bold'), url('../fonts/montserrat-v14-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/montserrat-v14-latin-700.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-regular - latin */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'), url('../fonts/roboto-v20-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/roboto-v20-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-700 - latin */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto Bold'), local('Roboto-Bold'), url('../fonts/roboto-v20-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/roboto-v20-latin-700.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-900 - latin */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Roboto Black'), local('Roboto-Black'), url('../fonts/roboto-v20-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/roboto-v20-latin-900.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 html {
     box-sizing: border-box;
 }
-*, *::before, *::after{
+
+*, *::before, *::after {
     box-sizing: inherit;
 }
+
 /* img {
     width: 100%;
     height: auto;
 } */
-a {
-    text-decoration: none;
-    color: inherit
+
+body {
+    font-family: 'Montserrat';
+    font-weight: 700;
 }
+
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
+
 .header {
     background-color: #eaeaea;
     padding-bottom: 40px;
     padding-top: 40px;
 }
+
 .header__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
+
 .header__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 .header__list-item {
-    color: aqua;
+    padding-right: 22px;
     margin-right: 22px;
+    position: relative;
 }
+
 .header__list-item:last-child {
+    padding-right: 0;
     margin-right: 0;
 }
+.header__list-item::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #494949;
+}
+.header__list-item:last-child::after {
+    display: none;
+}
+
+.header__nav-link {
+    text-decoration: none;
+    font-size: 17px;
+    color: #494949;
+    text-transform: uppercase;
+    position: relative;
+}
+.intro {
+    background: url(../img/bg.png) no-repeat center;
+    background-size: cover;
+}
+.wrapper__intro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.create {
+    padding-bottom: 265px;
+    padding-top: 275px;
+}
+.create__title {
+    font-weight: 400;
+    font-size: 45px;
+    color: #fff;
+    margin-bottom: 17px;
+}
+.create__subtitle {
+    font-family: 'Roboto';
+    font-size: 25px;
+    color: #fff;
+    line-height: 30px;
+    font-weight: 400;
+    max-width: 570px;
+    margin-bottom: 26px;
+}
+.create__btn {
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 16px 0px;
+    max-width: 190px;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+.pizza {
+    padding-top: 80px;
+    min-width: 220px;
+}
+.pizza__pic {
+    width: 100%;
+    height: auto;
+}
+.progress__title {
+    font-size: 45px;
+    text-align: center;
+    padding-left: 127px;
+    padding-right: 127px;
+    position: relative;
+    display: inline-block;
+}
+.progress__title::after, .progress__title::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: url(../img/item-tild.png) no-repeat;
+    height: 28px;
+    width: 102px;
+    top: calc(50% - 14px);
+}
+.progress__title::after {
+    right: 0;
+}
+.progress__title::before {
+    left: 0;
+}
+
+
